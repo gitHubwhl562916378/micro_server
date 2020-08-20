@@ -180,7 +180,7 @@ void HttpServer::HandTest(http_request message)
 
 }
 
-void HttpServer::Base64Encode(const std::string &input, std::string &output)
+bool HttpServer::Base64Encode(const std::string &input, std::string &output)
 {
     typedef boost::archive::iterators::base64_from_binary<boost::archive::iterators::transform_width<std::string::const_iterator, 6, 8>> Base64EncodeIterator;
     std::stringstream result;
@@ -198,7 +198,7 @@ void HttpServer::Base64Encode(const std::string &input, std::string &output)
     return output.empty() == false;
 }
 
-void HttpServer::Base64Decode(const std::string &input, std::string &output)
+bool HttpServer::Base64Decode(const std::string &input, std::string &output)
 {
     typedef boost::archive::iterators::transform_width<boost::archive::iterators::binary_from_base64<std::string::const_iterator>, 8, 6> Base64DecodeIterator;
     std::stringstream result;

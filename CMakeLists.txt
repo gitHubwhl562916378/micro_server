@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.9)
 
 set(spdlog_DIR /usr/local/spdlog/lib/spdlog/cmake)
-set(Poco_DIR /usr/local/poco/lib/cmake/Poco)
-set(cpprestsdk_DIR /usr/local/cpprest-sdk/lib/cpprestsdk)
+set(Poco_DIR /usr/local/poco/lib/cmake/poco)
+set(cpprestsdk_DIR /usr/local/cpprest-sdk/lib/cmake/cpprestsdk)
 project(micro_server)
 add_compile_options(-std=c++11 -fpermissive)
 find_package(cpprestsdk REQUIRED)

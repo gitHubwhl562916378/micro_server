@@ -19,8 +19,8 @@ public:
 private:
     void OnRequest(http_request);
     void HandTest(http_request);
-    void Base64Encode(const std::string & input, std::string &output);
-    void Base64Decode(const std::string &input, std::string &output);
+    bool Base64Encode(const std::string & input, std::string &output);
+    bool Base64Decode(const std::string &input, std::string &output);
 
     http_listener listener_;
     std::mutex hander_mtx_;
